@@ -1,0 +1,183 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#app {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 100%;
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #00a866;
+}
+
+.menu,
+.playlist ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li,
+.playlist li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menu li:hover,
+.playlist li:hover {
+  background-color: #00a866;
+}
+
+.playlist {
+  margin-top: auto;
+}
+
+/* Main Content Styles */
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+header {
+  background-color: #282828;
+  padding: 10px;
+  display: flex;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.featured {
+  padding: 20px;
+  flex: 1;
+}
+
+.featured h2 {
+  margin-bottom: 20px;
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.playlist-card {
+  background-color: #282828;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.playlist-card:hover {
+  background-color: #00a866;
+}
+
+/* Footer/Player Styles */
+footer {
+  background-color: #282828;
+  padding: 10px;
+  text-align: center;
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #282828;
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) {
+  #app {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 20%;
+  }
+
+  .content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1023px) {
+  #app {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .sidebar {
+    align-items: center;
+    width: 100%;
+  }
+
+  .content {
+    width: 75%;
+  }
+
+  .menu li,
+  .playlist li {
+    text-align: center;
+  }
+
+  .player {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .player span {
+    margin-bottom: 10px;
+  }
+
+  .playlist-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .playlist {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .playlist-card {
+    padding: 15px;
+  }
+
+  .search-bar input {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+}

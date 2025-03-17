@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Topsify</title>
+  <link rel="icon" href="assets/icons/topsify-icono.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div id="app">
+    <nav class="sidebar">
+
+      <div class="logo">Topsify</div>
+      <ul class="menu">
+        <li>Home</li>
+        <li>Search</li>
+        <li>Your Library</li>
+      </ul>
+      <div class="playlist">
+        <p>Your Playlists</p>
+        <ul>
+          <li>Chill Vibes</li>
+          <li>Workout Mix</li>
+          <li>Top Hits</li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="content">
+      <header>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for songs, artists, albums...">
+        </div>
+      </header>
+
+      <section class="featured">
+        <h2>Featured Playlists</h2>
+        <div class="playlist-grid">
+          <div class="playlist-card">Playlist 1</div>
+          <div class="playlist-card">Playlist 2</div>
+          <div class="playlist-card">Playlist 3</div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="player">
+          <span>Now Playing: Song Title</span>
+          <button onclick="playPause()">Play/Pause</button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
